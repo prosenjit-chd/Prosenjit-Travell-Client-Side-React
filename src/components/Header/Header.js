@@ -17,12 +17,12 @@ const Header = () => {
             {/* Bootstrap Tag use here  */}
             <Navbar variant="light" expand="lg" className="" style={{ "backgroundColor": "rgba(0, 0, 0, 0)" }}>
                 <Container fluid>
-                    <NavLink style={{ color: "#165aee" }} className="navbar-brand fw-bold" to="/home"> <img style={{ height: 60, width: 60 }} src="https://images.assetsdelivery.com/compings_v2/wikagraphic/wikagraphic2010/wikagraphic201036769.jpg" />Prosenjit Travel</NavLink>
+                    <NavLink style={{ color: "#165aee" }} className="navbar-brand fw-bold" to="/home"> <img style={{ height: 60, width: 60 }} src="https://i.ibb.co/KxCFhwL/travel-icon-png-4962-1.png" alt="banner"/>Prosenjit Travel</NavLink>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto fw-bold">
                             <NavLink className="nav-link" activeStyle={activeStyle} to="/home">Home</NavLink>
-                            <NavLink className="nav-link" activeStyle={activeStyle} to="/gesrg">About Us</NavLink>
+                            <NavLink className="nav-link" activeStyle={activeStyle} to="/aboutus">About Us</NavLink>
                             <NavLink className="nav-link" activeStyle={activeStyle} to="/mytour">My Travels</NavLink>
                             <NavLink className="nav-link" activeStyle={activeStyle} to="/alltours">See All Tours</NavLink>
                             <NavLink className="nav-link" activeStyle={activeStyle} to="/addmore">Add More</NavLink>

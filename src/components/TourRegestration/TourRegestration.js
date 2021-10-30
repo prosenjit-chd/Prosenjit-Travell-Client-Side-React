@@ -15,7 +15,7 @@ const TourRegestration = () => {
     const dateRef = useRef('');
     const purposeRef = useRef('');
     useEffect(() => {
-        axios.get(`http://localhost:5000/tourcollection/${id}`)
+        axios.get(`https://prosenjittravel.herokuapp.com/tourcollection/${id}`)
             .then(res => setEvent(res.data))
     }, [])
 
@@ -27,10 +27,11 @@ const TourRegestration = () => {
         const title = event.title;
         const description = event.description;
         const img = event.img;
+        const status = false;
         const date = dateRef.current.value;
         const details = purposeRef.current.value;
-        const data = { name, email, title, description, img, date, details }
-        axios.post('http://localhost:5000/users', data)
+        const data = { name, email, title, description, img, date, details, status }
+        axios.post('https://prosenjittravel.herokuapp.com/users', data)
             .then(res => {
                 alert("Tour added successfully");
                 e.target.reset();
@@ -57,7 +58,7 @@ const TourRegestration = () => {
                                 <Form.Control ref={dateRef} className="border border-2 border-top-0 border-start-0 border-end-0 mb-4" type="date" placeholder="Date" />
                                 <Form.Control ref={purposeRef} className="border border-2 border-top-0 border-start-0 border-end-0 mb-4" type="text" placeholder="Details Information" />
                             </Form.Group>
-                            <Button  variant="primary" type="submit" className="register-submit">
+                            <Button variant="primary" type="submit" className="register-submit">
                                 Registration
                             </Button>
                         </Form>

@@ -14,6 +14,7 @@ import AllTours from './components/AllTours/AllTours';
 import AuthProvider from './context/AuthProvider';
 import NotFound from './components/NotFound/NotFound';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import About from './components/About/About';
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
             </Route>
             <Route path="/home">
               <Home></Home>
+            </Route>
+            <Route path="/aboutus">
+              <About></About>
             </Route>
             <Route path="/signin">
               <SignIn> </SignIn>

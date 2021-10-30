@@ -10,25 +10,26 @@ const MyTour = () => {
     const { user } = useAuth();
     const [myEvents, setMyEvents] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:5000/users/')
+        axios.get('https://prosenjittravel.herokuapp.com/users/')
             .then(res => filterMyEvent(res.data))
     }, [])
 
     const filterMyEvent = (data) => {
-        console.log(data)
         setMyEvents(data.filter(event => event.email === user.email))
     }
 
 
 
     const handleEventDelete = (id) => {
-        axios.delete(`http://localhost:5000/users/${id}`)
-            .then(res => {
-                alert("Successfully deleted");
-                const remainingEvents = myEvents.filter(e => e._id !== id);
-                setMyEvents(remainingEvents);
+        const access = window.confirm("Are you want to sure delete this?");
+        if (access) {
+            axios.delete(`https://prosenjittravel.herokuapp.com/users/${id}`)
+                .then(res => {
+                    const remainingEvents = myEvents.filter(e => e._id !== id);
+                    setMyEvents(remainingEvents);
+                }).catch(err => console.log(err))
+        }
 
-            }).catch(err => console.log(err))
     }
 
     return (
@@ -40,6 +41,9 @@ const MyTour = () => {
                             <Card.Img variant="left" className="enroll-img" src={e.img} />
                             <Card.Body className="text-center mt-5">
                                 <Card.Title>{e.title}</Card.Title>
+                                <Card.Text>
+                                    <b> Status: {!e.status ? "Pending" : "Approved"} </b>
+                                </Card.Text>
                                 <Card.Text>
                                     {e.description.slice(0, 50)}
                                 </Card.Text>

@@ -7,19 +7,37 @@ import { ArchiveFill, Calendar2DateFill, CheckSquareFill, GeoAltFill } from 'rea
 
 const AllTours = () => {
     const [events, setEvents] = useState([]);
+    let updateUser = {};
     useEffect(() => {
-        axios.get('http://localhost:5000/users')
+        axios.get('https://prosenjittravel.herokuapp.com/users')
             .then(res => setEvents(res.data))
-    }, [])
+    }, [updateUser])
 
     const handleEventDelete = (id) => {
-        axios.delete(`http://localhost:5000/users/${id}`)
-            .then(res => {
-                alert("Successfully deleted");
-                const remainingEvents = events.filter(e => e._id !== id);
-                setEvents(remainingEvents);
+        const access = window.confirm("Are you want to sure delete this?");
+        if (access) {
+            axios.delete(`https://prosenjittravel.herokuapp.com/users/${id}`)
+                .then(res => {
+                    const remainingEvents = events.filter(e => e._id !== id);
+                    setEvents(remainingEvents);
 
-            }).catch(err => console.log(err))
+                }).catch(err => console.log(err))
+        }
+    }
+
+    const handleUserStatus = (id) => {
+        updateUser = events.find(event => event._id === id)
+        console.log(updateUser);
+        updateUser.status = !updateUser.status;
+        // setUpdateEvent(findEvent)
+        axios.put(`https://prosenjittravel.herokuapp.com/users/${id}`, updateUser)
+            .then(res => {
+                if (res.data.modifiedCount > 0) {
+                    alert('update successful');
+                }
+            })
+            .catch(err => console.log(err))
+        // console.log(findEvent);
     }
 
     return (
@@ -50,6 +68,7 @@ const AllTours = () => {
                                     <th>Email ID</th>
                                     <th>Registating date</th>
                                     <th>Travell place</th>
+                                    <th>Status</th>
                                     <th>Approve</th>
                                     <th>Delete</th>
                                 </tr>
@@ -62,7 +81,8 @@ const AllTours = () => {
                                         <td>{e.email}</td>
                                         <td>{e.date}</td>
                                         <td>{e.title}</td>
-                                        <td className="text-center" role="button"><CheckSquareFill /></td>
+                                        <td >{!e.status ? "Pending" : "Approved"}</td>
+                                        <td onClick={() => handleUserStatus(e._id)} className="text-center" role="button"><CheckSquareFill /></td>
                                         <td className="text-center" role="button" onClick={() => handleEventDelete(e._id)} > <ArchiveFill></ArchiveFill> </td>
                                     </tr>)
                                 }

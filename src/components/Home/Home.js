@@ -12,7 +12,7 @@ const Home = () => {
 
     // Use Use Effect here 
     useEffect(() => {
-        fetch('http://localhost:5000/tourcollection')
+        fetch('https://prosenjittravel.herokuapp.com/tourcollection')
             .then(res => res.json())
             .then(data => setTour(data.tours))
     }, []);
@@ -25,8 +25,8 @@ const Home = () => {
                         <Row className="">
                             <Col lg="12 text-center">
                                 <div className="" style={{ marginTop: 100 }}>
-                                    <h1 className="mt-5 home-text custom-text-color">Prosenjit Travell</h1>
-                                    <h2>Your journey starts here</h2>
+                                    <h1 className="mt-5 home-text custom-text-color" style={{ color: "#e6520eb6" }}>Prosenjit Travel Agency</h1>
+                                    <h2 style={{ color: "#1F3B64" }}>Starts your journey from here</h2>
                                     <div className="my-5 fs-5">
                                         <p className="home-details"><ArrowRightCircleFill className="custom-text-color" /> Led by Passionate Experts</p>
                                         <p className="home-details"><ArrowRightCircleFill className="custom-text-color" /> Trustable and trusted</p>
@@ -53,18 +53,18 @@ const Home = () => {
                 </Row>
             </Container>
             {/* Frequently Asked Questions Section */}
-            <section class="fetured-bike">
-                <div class="container">
-                    <h1 class="mb-5">Frequently Asked <span class="customer-review-tittle">Questions</span></h1>
+            <section className="fetured-bike">
+                <div className="container">
+                    <h1 className="mb-5">Frequently Asked <span className="customer-review-tittle">Questions</span></h1>
                     {/* cards */}
-                    <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 g-4">
-                        <div class="col">
+                    <div className="row row-cols-1 row-cols-md-1 row-cols-lg-2 g-4">
+                        <div className="col">
                             <div>
-                                <img src="https://i.ibb.co/x3h0TQr/xabout2-png-pagespeed-ic-FKuxbsbrr-T.webp" class="card-img-top img-fluid" alt="..." />
+                                <img src="https://i.ibb.co/x3h0TQr/xabout2-png-pagespeed-ic-FKuxbsbrr-T.webp" className="card-img-top img-fluid" alt="..." />
                             </div>
                         </div>
 
-                        <div class="col">
+                        <div className="col">
                             <Accordion defaultActiveKey="0">
                                 <Accordion.Item eventKey="0">
                                     <Accordion.Header>3 Night 4 Day Packages</Accordion.Header>
@@ -91,8 +91,8 @@ const Home = () => {
             </section>
             {/* Achivement Slide Show Section */}
             <section>
-                <div class="container mt-5 mb-5">
-                    <h1 class="mb-5">Lets See Our <span class="customer-review-tittle">Achivements</span></h1>
+                <div className="container mt-5 mb-5">
+                    <h1 className="mb-5">Lets See Our <span className="customer-review-tittle">Achivements</span></h1>
                     <Carousel className="carousel-custom">
                         <Carousel.Item>
                             <Row>

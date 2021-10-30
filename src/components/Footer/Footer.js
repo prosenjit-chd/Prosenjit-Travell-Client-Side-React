@@ -1,5 +1,5 @@
 import React from 'react';
-import { BinocularsFill, Calendar2DayFill, CashCoin, CreditCard2Back, Headset, HouseDoorFill, JournalBookmarkFill, Safe2Fill } from 'react-bootstrap-icons';
+import { Calendar2DayFill, HouseDoorFill, JournalBookmarkFill, Safe2Fill } from 'react-bootstrap-icons';
 // External CSS Style Added here 
 import './Footer.css'
 
