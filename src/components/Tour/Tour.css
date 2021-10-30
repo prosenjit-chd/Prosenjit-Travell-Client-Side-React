@@ -1,0 +1,45 @@
+/* Custome CSS style classes  */
+
+/* fonts  */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* common styles  */
+
+.cart-font{
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.175);
+    background-color: rgba(227, 231, 238, 0.473);
+    border-radius: 15px;
+}
+
+.cart-font:hover {
+    box-shadow: 4px 4px 7px gray;
+    border-radius: 10px;
+}
+
+.card-img{
+    height: 300px;
+    border-radius: 15px;
+}
+
+.card-title{
+    font-size: 25px;
+    font-weight: 500;
+    color: #1f864a;
+}
+
+.cart-text{
+    font-size: 17px;
+}
+
+.card-details{
+    font-size: 14px;
+    margin: 0px 0px 16px;
+}
+.card-md-icon-1{
+    margin: 0px 12px 0px 0px;
+}
+.card-md-icon-2{
+    margin: -4px 7px 0px 0px;
+}

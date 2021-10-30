@@ -1,0 +1,56 @@
+[
+    {
+        "id": "B002RL8IYK",
+        "title": "Welcome resort bali",
+        "price": 54000,
+        "deadline": "22-11-2021",
+        "location": "Bali, Indonesia",
+        "description": "Bali is a province of Indonesia and the westernmost of the Lesser Sunda Islands. East of Java and west of Lombok, the province includes the island of Bali and a few smaller neighbouring islands",
+        "img": "https://i.ibb.co/4dR6sTD/bali.jpg"
+    },
+    {
+        "id": "B002RL8IYA",
+        "title": "Mount Everest",
+        "price": 34000,
+        "deadline": "12-11-2021",
+        "location": "Solukhumbu, Nepal",
+        "description": "Mount Everest is Earth's highest mountain above sea level, located in the Mahalangur Himal sub-range of the Himalayas. The China–Nepal border run its summit point. Its elevation of 8,848.86 m",
+        "img": "https://i.ibb.co/JsQp1xv/nepal.jpg"
+    },
+    {
+        "id": "B002RL8IYB",
+        "title": "Kashmir Nishat Bag",
+        "price": 85000,
+        "deadline": "15-12-2021",
+        "location": "Kashmir, India",
+        "description": "Jammu and Kashmir was a region formerly administered by India as a state from 1954 to 2019, constituting the southern and southeastern portion of the larger Kashmir region  dispute between India",
+        "img": "https://i.ibb.co/55xLt5F/kashmir-hd-wallpaper.jpg"
+    },
+    {
+        "id": "B002RL8IYC",
+        "title": "Pattaya City",
+        "price": 73000,
+        "deadline": "15-01-2022",
+        "location": "Tamuk, Pattaya, Thailand",
+        "description": "Pattaya is a city on Thailand’s eastern Gulf coast known for its beaches. A quiet fishing village as recently as the 1960s, it’s now lined with resort hotels, high-rise condos, shopping malls nice palce .",
+        "img": "https://i.ibb.co/Nr145pq/pattaya.jpg"
+    },
+    {
+        "id": "B002RL8IYD",
+        "title": "CoxBazar Sea beach",
+        "price": 13000,
+        "deadline": "15-11-2021",
+        "location": "CoxBazar, Bangladesh",
+        "description": "Cox’s Bazar is a town on the southeast coast of Bangladesh. It’s known for its very long, sandy beachfront, stretching from Sea Beach in the north to Kolatoli Beach in the south. Aggameda Khyang",
+        "img": "https://i.ibb.co/DpyWTPX/coxbazar.jpg"
+    },
+    {
+        "id": "B002RL8IYE",
+        "title": "Debotakhum bandarban",
+        "price": 17000,
+        "deadline": "15-11-2021",
+        "location": "Bandarban, Bangladesh",
+        "description": "Bandarban, is a district in South-Eastern Bangladesh, and a part of the Chittagong Division. It is one of the three hill districts of Bangladesh and a part of the Chittagong Hill Tracts, the others",
+        "img": "https://i.ibb.co/0QNzGhs/debotakhum.jpg"
+    }
+]
