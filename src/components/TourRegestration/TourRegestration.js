@@ -52,7 +52,7 @@ import swal from 'sweetalert';
                     <Col lg="5" className="d-flex justify-content-between flex-column">
                         <h3 className="text-primary">{event.title}</h3>
                         <h5 className="text-dark">Cost Per Person: {event.price} BDT</h5 >
-                        <img style={{ height: 300, width: 450, borderRadius: 5 }} className="" src={event.img} alt="ad" />
+                        <img className="img-fluid" src={event.img} alt="ad" />
 
                     </Col>
 

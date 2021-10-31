@@ -56,21 +56,28 @@ const MyTour = () => {
                 {/* Self tour card  */}
                 {
                     myEvents.map(e => <Col>
-                        <Card className="border-0 d-flex flex-row bg-light p-4 h-100 shadow-lg rounded">
-                            <Card.Img variant="left" className="enroll-img" src={e.img} />
-                            <Card.Body className="text-center mt-5">
-                                <Card.Title>{e.title}</Card.Title>
-                                <Card.Text>
-                                    <b> Status: {!e.status ? "Pending" : "Approved"} </b>
-                                </Card.Text>
-                                <Card.Text>
-                                    {e.description.slice(0, 50)}
-                                </Card.Text>
-                                <Card.Text>
-                                    <b>{e.date}</b>
-                                </Card.Text>
-                                <Button onClick={() => handleEventDelete(e._id)} variant="danger">Cancle</Button>
-                            </Card.Body>
+                        <Card className="border-0 bg-light p-4 h-100 shadow-lg rounded">
+                            <Row>
+                                <Col lg="6">
+                                    <Card.Img variant="" className="img-fluid mx-auto" src={e.img} />
+                                </Col>
+                                <Col lg="6">
+                                    <Card.Body className="text-center mt-5">
+                                        <Card.Title>{e.title}</Card.Title>
+                                        <Card.Text>
+                                            <b> Status: {!e.status ? "Pending" : "Approved"} </b>
+                                        </Card.Text>
+                                        <Card.Text>
+                                            {e.description.slice(0, 50)}
+                                        </Card.Text>
+                                        <Card.Text>
+                                            <b>{e.date}</b>
+                                        </Card.Text>
+                                        <Button onClick={() => handleEventDelete(e._id)} variant="danger">Cancle</Button>
+                                    </Card.Body>
+                                </Col>
+                            </Row>
+
                         </Card>
                     </Col>)
                 }
