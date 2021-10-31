@@ -6,7 +6,7 @@ import './About.css';
 
 const About = () => {
     return (
-        <Container style={{ marginTop: 50 }}>
+        <Container className="bg-light shadow-lg p-2 rounded" style={{ marginTop: 50 }}>
             <Row className="pt-5">
                 <Col lg="6">
                     <img className="img-fluid rounded-1" src="https://i.ibb.co/bRNL4Kj/coastal-family-health-travel-clinic.jpg" alt="" />

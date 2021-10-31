@@ -7,19 +7,21 @@ import useAuth from '../../hooks/useAuth';
 import { useParams } from 'react-router';
 import './TourRegestration.css';
 import axios from 'axios';
+import swal from 'sweetalert';
 
-const TourRegestration = () => {
-    const { id } = useParams();
-    const [event, setEvent] = useState({});
-    const { user } = useAuth();
-    const dateRef = useRef('');
-    const purposeRef = useRef('');
-    useEffect(() => {
-        axios.get(`https://prosenjittravel.herokuapp.com/tourcollection/${id}`)
-            .then(res => setEvent(res.data))
-    }, [])
+    const TourRegestration = () => {
+        // Here Use useRef, UseAuth, UseParams, UseState 
+        const { id } = useParams();
+        const [event, setEvent] = useState({});
+        const { user } = useAuth();
+        const dateRef = useRef('');
+        const purposeRef = useRef('');
+        useEffect(() => {
+            axios.get(`https://prosenjittravel.herokuapp.com/tourcollection/${id}`)
+                .then(res => setEvent(res.data))
+        }, [])
 
-
+    //Add Tour event button handler 
     const handleUser = (e) => {
         e.preventDefault();
         const name = user.displayName;
@@ -33,7 +35,12 @@ const TourRegestration = () => {
         const data = { name, email, title, description, img, date, details, status }
         axios.post('https://prosenjittravel.herokuapp.com/users', data)
             .then(res => {
-                alert("Tour added successfully");
+                swal({
+                    title: "Thank you Sir",
+                    text: "You tour event added successfully",
+                    icon: "success",
+                    button: "Go back!",
+                  });
                 e.target.reset();
             })
     }
