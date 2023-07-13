@@ -25,7 +25,7 @@ const AddMore = () => {
         const description = descriptionRef.current.value;
         const img = imgRef.current.value;
         const data = { title, price, deadline, location, description, img }
-        axios.post('https://prosenjittravel.herokuapp.com/tourcollection', data)
+        axios.post('https://prosenjit-enterprise-server-side-node-5mwf.onrender.com/tourcollection', data)
             .then(res => {
                 swal({
                     title: "Thank you Sir",
@@ -41,7 +41,7 @@ const AddMore = () => {
 
     // Use Use Effect here 
     useEffect(() => {
-        fetch('https://prosenjittravel.herokuapp.com/tourcollection')
+        fetch('https://prosenjit-enterprise-server-side-node-5mwf.onrender.com/tourcollection')
             .then(res => res.json())
             .then(data => setTour(data.tours))
     }, [tour]);

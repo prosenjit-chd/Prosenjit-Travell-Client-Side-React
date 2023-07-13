@@ -17,7 +17,7 @@ import swal from 'sweetalert';
         const dateRef = useRef('');
         const purposeRef = useRef('');
         useEffect(() => {
-            axios.get(`https://prosenjittravel.herokuapp.com/tourcollection/${id}`)
+            axios.get(`https://prosenjit-enterprise-server-side-node-5mwf.onrender.com/tourcollection/${id}`)
                 .then(res => setEvent(res.data))
         }, [])
 
@@ -33,7 +33,7 @@ import swal from 'sweetalert';
         const date = dateRef.current.value;
         const details = purposeRef.current.value;
         const data = { name, email, title, description, img, date, details, status }
-        axios.post('https://prosenjittravel.herokuapp.com/users', data)
+        axios.post('https://prosenjit-enterprise-server-side-node-5mwf.onrender.com/users', data)
             .then(res => {
                 swal({
                     title: "Thank you Sir",

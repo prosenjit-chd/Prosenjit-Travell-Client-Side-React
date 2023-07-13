@@ -13,7 +13,7 @@ const MyTour = () => {
     // Use UseState here 
     const [myEvents, setMyEvents] = useState([]);
     useEffect(() => {
-        axios.get('https://prosenjittravel.herokuapp.com/users/')
+        axios.get('https://prosenjit-enterprise-server-side-node-5mwf.onrender.com/users/')
             .then(res => filterMyEvent(res.data))
     }, [])
 
@@ -34,7 +34,7 @@ const MyTour = () => {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    axios.delete(`https://prosenjittravel.herokuapp.com/users/${id}`)
+                    axios.delete(`https://prosenjit-enterprise-server-side-node-5mwf.onrender.com/users/${id}`)
                         .then(res => {
                             const remainingEvents = myEvents.filter(e => e._id !== id);
                             setMyEvents(remainingEvents);

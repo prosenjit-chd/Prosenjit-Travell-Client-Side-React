@@ -13,7 +13,7 @@ const Home = () => {
 
     // Use USe State here 
     useEffect(() => {
-        fetch('https://prosenjittravel.herokuapp.com/tourcollection')
+        fetch('https://prosenjit-enterprise-server-side-node-5mwf.onrender.com/tourcollection')
             .then(res => res.json())
             .then(data => setTour(data.tours))
     }, []);

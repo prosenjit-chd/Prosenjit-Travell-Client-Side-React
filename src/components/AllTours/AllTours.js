@@ -14,7 +14,7 @@ const AllTours = () => {
     let updateUser = {};
     // Use Effect use here for fetching data 
     useEffect(() => {
-        axios.get('https://prosenjittravel.herokuapp.com/users')
+        axios.get('https://prosenjit-enterprise-server-side-node-5mwf.onrender.com/users')
             .then(res => setEvents(res.data))
     }, [updateUser])
 
@@ -29,7 +29,7 @@ const AllTours = () => {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    axios.delete(`https://prosenjittravel.herokuapp.com/users/${id}`)
+                    axios.delete(`https://prosenjit-enterprise-server-side-node-5mwf.onrender.com/users/${id}`)
                         .then(res => {
                             const remainingEvents = events.filter(e => e._id !== id);
                             setEvents(remainingEvents);
@@ -48,7 +48,7 @@ const AllTours = () => {
     const handleUserStatus = (id) => {
         updateUser = events.find(event => event._id === id)
         updateUser.status = !updateUser.status;
-        axios.put(`https://prosenjittravel.herokuapp.com/users/${id}`, updateUser)
+        axios.put(`https://prosenjit-enterprise-server-side-node-5mwf.onrender.com/users/${id}`, updateUser)
             .then(res => {
                 if (res.data.modifiedCount > 0) {
                     swal({
